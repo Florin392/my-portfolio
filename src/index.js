@@ -5,12 +5,10 @@ import {ThemeProvider} from "./context";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import About from "./components/about/About";
 
-
-
 ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider>
-            <Router>
+            <Router basename={"/myPortfolio"}>
                 <Routes>
                     <Route path='/' element={<App/>}/>
                     <Route path='/about' element={<About/>}/>
