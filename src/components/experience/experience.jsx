@@ -84,7 +84,7 @@ export default function Experience() {
                         </div>
 
                         <div className="hoverContainer">
-                            <img src="img/hoverBacground.jpg" alt=""/>
+                            <img src="img/hoverbackground.jpg" alt=""/>
                             <h2 style={{color: setdarkMode && "yellow"}}>{d.hoverEffectTitle.map((el, indexEl) => <p
                                 key={indexEl}>{el}</p>)}</h2>
                             <h3 style={{color: setdarkMode && "yellow"}}>{d.hoverEffectDescription.map((el, indexelL) =>
