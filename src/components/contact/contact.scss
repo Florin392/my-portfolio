@@ -1,0 +1,201 @@
+@import "../../global.scss";
+@import "../topbar/topbar.scss";
+
+
+.contact {
+  height: 100vh;
+  position: relative;
+
+
+  .contact-bg {
+    height: 100vh;
+    width: 2rem;
+    background-color: #59b256;
+    position: absolute;
+    top: 0;
+
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+
+    .wr-left {
+      flex: .5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        width: 80%;
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        .item {
+          display: flex;
+          align-items: center;
+          margin: 2rem 0 1rem 0;
+          font-weight: 300;
+          font-size: 1.2rem;
+          letter-spacing: .1rem;
+
+          .icon {
+            height: 3rem;
+            width: 3rem;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+
+    .wr-right {
+      overflow: hidden;
+      flex: .5;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      .description {
+        width: 80%;
+        display: flex;
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 2rem;
+      }
+      .errors {
+        height: auto;
+        color: #dc1e1e;
+        font-size: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .messageSent {
+        display: flex;
+        text-align: center;
+        padding-top: 6rem;
+        color: green;
+        letter-spacing: .1rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+      }
+
+      .formContent {
+        width: inherit;
+
+
+        form {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+          overflow: hidden;
+
+
+          input {
+            width: 80%;
+            height: 3rem;
+            border: none;
+            border-bottom: .2rem solid black;
+            margin-top: 1.3rem;
+            font-size: 1.4rem;
+            padding-left: .3rem;
+
+          }
+
+          textarea {
+            padding: 1.1rem 0.3rem;
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            border: .2rem solid #949393;
+          }
+
+          button {
+            width: 30%;
+            margin-top: 2rem;
+            padding: 1rem;
+            border: none;
+            background-color: #59b256;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+//........................Media Screen (min-width:500px) ..........................
+
+@media all and (min-width: 500px) {
+  .contact {
+    height: calc(100vh - 10rem);
+    overflow: hidden;
+    .contact-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .wr-left {
+        flex: .6;
+
+        .title {
+          width: 100%;
+        }
+
+        .info {
+          .item {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .wr-right {
+        flex: .45;
+        padding-top: 10rem;
+
+        .errors {
+          position: absolute;
+          bottom: 7vh;
+        }
+
+        .messageSent {
+          position: absolute;
+          bottom: 20vh;
+        }
+
+
+        .formContent {
+          form {
+            textarea {
+              margin-top: .5rem;
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+}
+

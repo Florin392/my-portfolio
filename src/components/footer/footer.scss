@@ -1,0 +1,37 @@
+@import "../../global.scss";
+
+.footer {
+  background-color: $secondColor;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $mainColor;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+
+  a {
+    display: none;
+
+  }
+}
+
+//........................Media Screen (min-width:500px) ..........................
+
+@media all and (min-width: 500px) {
+  .footer {
+
+    a {
+      position: absolute;
+      right: 5rem;
+      display: flex;
+      align-items: center;
+      color: $mainColor;
+      font-size: 3rem;
+      transition: all 2s ease;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@import "../../global.scss";
+
+
+.experience {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    overflow: hidden;
+    font-size: 50px;
+    padding: 1rem 0 1.5rem 0;
+  }
+
+  ul {
+    width: 75%;
+    height: 4rem;
+    position: absolute;
+    top: 6.2rem;
+    margin: 1rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .container {
+    position: absolute;
+    top: 10rem;
+    height: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .item {
+      width: 25rem;
+      height: 30rem;
+      border-radius: 20px;
+      border: 0.1rem solid #8f8d8d;
+      margin: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+
+
+      .itemDetails {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+
+        //title
+        h3 {
+          width: 85%;
+          position: absolute;
+          top: 1.5rem;
+          font-size: 1.7rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        //date
+        h4 {
+          position: absolute;
+          top: 5.5rem;
+          right: 1rem;
+          font-size: 10px;
+          font-weight: 400;
+          color: #949393;
+        }
+
+        //descriptions
+        h6 {
+          width: 90%;
+          font-size: 1.2rem;
+          font-weight: 400;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          padding-left: 1rem;
+
+        }
+
+        //company
+        h5 {
+          text-align: center;
+          position: absolute;
+          bottom: 1.5rem;
+          font-size: 1.2rem;
+          font-weight: 300;
+          letter-spacing: .2rem;
+          color: #949393;
+
+        }
+      }
+      //hoverEffect
+      .hoverContainer {
+        display: none;
+        height: 100%;
+
+      }
+
+      &:hover {
+        .hoverContainer{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          text-align: center;
+
+
+        }
+        img{
+          z-index: 0;
+          height: 100%;
+
+        }
+        h2{
+          position: absolute;
+          top: 5rem;
+          z-index: 1;
+          color: $mainColor;
+          font-size: 3rem;
+        }
+        h3{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          top: 10rem;
+          z-index: 1;
+          color: $mainColor;
+          font-size: 2rem;
+        }
+
+        //background-color: $mainColor;
+        //z-index: 1;
+        //opacity: 60%;
+        //transition: all .5s ease;
+
+        .itemDetails {
+          opacity: 0;
+
+        }
+      }
+    }
+  }
+
+}
+
+//........................Media Screen (min-width:500px) ..........................
+@media all and (min-width: 500px) {
+  .experience {
+
+    ul {
+      width: 50%;
+      position: absolute;
+      top: 8rem;
+    }
+
+    .container {
+      position: absolute;
+      top: 14rem;
+      .item {
+
+        width: 27rem;
+        height: 45rem;
+
+      .itemDetails {
+      }
+        &:hover {
+          h2{
+            top: 12rem;
+          }
+          h3{
+            top: 20rem
+          }
+        }
+      }
+    }
+
+  }
+}

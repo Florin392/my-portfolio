@@ -1,0 +1,175 @@
+@import "../../global";
+
+
+.topbar {
+  width: 100vw;
+  height: 4.7rem;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+
+  .wrapper_top {
+    padding: 0.8rem 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      .logo {
+        display: flex;
+        margin-right: 1rem;
+
+        a {
+          font-size: 1.7rem;
+          font-weight: 700;
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 3rem;
+
+        .phone {
+          display: flex;
+          margin-right: .7rem;
+        }
+
+        .mail {
+          display: none;
+        }
+
+        .socialMedia {
+          display: flex;
+          margin-right: .7rem;
+
+          a {
+            color: #0072b1;
+          }
+        }
+
+        a {
+          color: inherit;
+          font-size: 2rem;
+          display: flex;
+          margin-right: .7rem;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: .1rem;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 2rem;
+        height: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        overflow: hidden;
+
+        span {
+          width: 100%;
+          height: .25rem;
+          background-color: black;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+
+  &.active {
+    background-color: $secondColor;
+    color: inherit;
+    overflow: hidden;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: #C1B8DEFF;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+
+        }
+
+        &:last-child {
+          background-color: #C1B8DEFF;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+
+//........................Media Screen (min-width:500px) ..........................
+
+@media all and (min-width: 500px) {
+  .topbar {
+
+    .wrapper_top {
+      padding: 0.8rem 3rem 0 2.2rem;
+
+      .left {
+        .logo {
+          margin-right: 3rem;
+
+          a {
+            font-size: 3rem;
+          }
+        }
+
+        .itemContainer {
+          a {
+            font-size: 2.5rem;
+          }
+
+          span {
+            font-size: 2rem;
+          }
+
+          .phone {
+            margin-right: 1rem;
+          }
+
+          .mail {
+            display: flex;
+            margin-right: 1rem;
+          }
+
+        }
+      }
+
+      .right {
+        .hamburger {
+          width: 2.5rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+

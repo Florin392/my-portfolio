@@ -1,0 +1,158 @@
+@import "../../global.scss";
+
+.intro {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .left {
+    flex: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .imgContainer {
+      height: 63%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    flex: .32;
+    width: 100vw;
+    display: flex;
+
+    a {
+      display: none;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+
+      h1 {
+        font-size: 5rem;
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+link {
+  z-index: 500;
+}
+
+//........................Media Screen (min-width:500px) ..........................
+@media all and (min-width: 500px) {
+
+  .intro {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+
+    .left {
+      flex: 0.6;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+
+      .imgContainer {
+        height: 75%;
+        width: 65%;
+        position: absolute;
+        top: 12rem;
+
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 4rem 4rem 6rem 6rem;
+
+        }
+      }
+    }
+
+    .right {
+      flex: 0.4;
+      display: flex;
+
+      .wrapper {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 1rem;
+
+        .aboutMe {
+          h2 {
+            font-size: 1.2rem;
+          }
+          a{
+            bottom: 23.5rem;
+            left: 93rem;
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+
+      }
+
+      ///............. arrow......
+
+      a {
+        display: flex;
+        position: absolute;
+        bottom: 3rem;
+        left: 70%;
+
+        img {
+          width: 5rem;
+          height: 7rem;
+          animation: arrowBlink 2.5s infinite;
+        }
+
+        @keyframes arrowBlink {
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

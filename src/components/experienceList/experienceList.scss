@@ -1,0 +1,18 @@
+@import "../../global.scss";
+
+.experienceList {
+  font-size: 1.4rem;
+  padding: .3rem .3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &.active {
+    background-color: crimson;
+    color: white;
+
+  }
+}
+
+
+//........................Media Screen (min-width:500px) ..........................
+
