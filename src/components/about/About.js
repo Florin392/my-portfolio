@@ -51,7 +51,7 @@ export default function About() {
 
                 <div className='right-section'>
                     <div className='right-section-name'>
-                        <svg  width={300} height={200} >
+                        <svg  width={300} height={100} >
                             <symbol id="s-text">
                                 <text textAnchor="middle" x="50%" y="50%">Things I enjoy</text>
                             </symbol>

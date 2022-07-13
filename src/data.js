@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export const coursesData = [{
     id: "1",
     title: "JavaScript Developer",

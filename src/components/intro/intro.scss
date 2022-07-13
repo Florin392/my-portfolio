@@ -12,7 +12,7 @@
     justify-content: center;
 
     .imgContainer {
-      height: 63%;
+      height: 60vh;
       position: absolute;
       top: 0;
       display: flex;
@@ -34,24 +34,43 @@
     }
 
     .wrapper {
-      width: 100%;
+      overflow: hidden;
+      width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 3vh;
 
+      .aboutMe {
+
+        h2 {
+          font-size: 3vw;
+          margin-top: 3vh;
+        }
+
+        a {
+          display: flex;
+          color: inherit;
+        }
+      }
 
       h1 {
-        font-size: 5rem;
-        padding: 1rem;
+        font-size: 10vw;
+        max-width: 90%;
+        text-align: center;
+        margin-top: 2vh;
       }
 
       h2 {
-        font-size: 3rem;
+        margin-top: 1vh;
+
+        font-size: 6vw;
       }
 
       h3 {
-        font-size: 2.5rem;
+        font-size: 5vw;
+        margin-top: 1vh;
 
         span {
           font-size: inherit;
@@ -71,16 +90,15 @@
           }
         }
       }
+
     }
   }
 }
 
-link {
-  z-index: 500;
-}
+
 
 //........................Media Screen (min-width:500px) ..........................
-@media all and (min-width: 500px) {
+@media all and (min-width: 501px) {
 
   .intro {
     display: flex;
@@ -104,7 +122,10 @@ link {
           height: 100%;
           width: 100%;
           border-radius: 4rem 4rem 6rem 6rem;
-
+          @media all and (min-width: 1550px) {
+            height: 100%;
+            width: 80%;
+          }
         }
       }
     }
@@ -117,19 +138,45 @@ link {
         display: flex;
         align-items: flex-start;
         margin-left: 1rem;
+        h1 {
+          font-size: 5vw;
+          max-width: 90%;
+          text-align: center;
+          margin-top: 2vh;
+        }
 
-        .aboutMe {
+        h2 {
+          font-size: 3vw;
           margin-top: 2rem;
+        }
+
+        h3 {
+          font-size: 2vw;
+          margin-top: 1vh;
+        }
+        .aboutMe {
+          height: 5rem;
+          width: 7rem;
+
           h2 {
-            font-size: 1.2rem;
+            font-size: 1.7vh;
           }
-          a{
-            bottom: 23.5rem;
-            left: 93rem;
+
+          a {
             color: inherit;
-            text-decoration: none;
+            position: absolute;
+            left: 61vw;
+            bottom: calc(100% - 60vh);
+
+            @media all and (min-width: 1100px) {
+              bottom: calc(100% - 65vh);
+            }
+            @media all and (min-width: 1550px) {
+              bottom: calc(100% - 70vh);
+            }
           }
         }
+
 
       }
 

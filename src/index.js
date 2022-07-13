@@ -9,7 +9,7 @@ ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider>
             <Router basename={"/portfolio"}>
-                <Routes>
+            <Routes>
                     <Route path='/' element={<App/>}/>
                     <Route path='/about' element={<About/>}/>
                 </Routes>
