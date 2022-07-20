@@ -14,7 +14,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
 
     return (
         <div className={"topbar " + (menuOpen && "active")}
-             style={{backgroundColor: setdarkMode ? (menuOpen && "active") : "white",
+             style={{backgroundColor: setdarkMode || (menuOpen && "active"),
                  color: setdarkMode ? "#C1B8DEFF" : "black" }}>
             <div className="wrapper_top">
                 <div className="left">
