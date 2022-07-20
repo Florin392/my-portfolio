@@ -4,14 +4,17 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faUser} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {ThemeContext} from "../../context";
+import {useNavigate} from "react-router-dom";
+
 
 export default function Topbar({menuOpen, setMenuOpen}) {
     const theme = useContext(ThemeContext)
     const setdarkMode = theme.state.darkMode;
+    let navigate = useNavigate();
 
     return (
         <div className={"topbar " + (menuOpen && "active")}
-             style={{backgroundColor: setdarkMode || (menuOpen && "active"),
+             style={{backgroundColor: setdarkMode ? (menuOpen && "active") : "white",
                  color: setdarkMode ? "#C1B8DEFF" : "black" }}>
             <div className="wrapper_top">
                 <div className="left">
@@ -19,12 +22,16 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                         <a href="https://florin392.github.io/portfolio/">myWork.</a>
                     </div>
                    <div className="itemContainer">
-                       <div className="phone">
-                           <a href="#contact"> <FontAwesomeIcon  icon={faUser}/></a>
+                       <div className="phone" onClick={() => {
+                           navigate('/portfolio')
+                       }}>
+                           <a href="#footer"> <FontAwesomeIcon  icon={faUser}/></a>
                            <span> +40 731 006 282</span>
                        </div>
-                       <div className="mail">
-                           <a href="#footer"> <FontAwesomeIcon  icon={faEnvelope}/></a>
+                       <div className="mail" onClick={() => {
+                           navigate('/portfolio')
+                       }}>
+                           <a href="#contact"> <FontAwesomeIcon  icon={faEnvelope}/></a>
                            <span> iordacheflorin3@yahoo.com</span>
                        </div>
                        <div className="socialMedia">

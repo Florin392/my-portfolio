@@ -2,7 +2,7 @@
 
 
 .experience {
-  height: 100%;
+  height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +63,7 @@
 
         //title
         h3 {
-          width: 90%;
+          width: 95%;
           position: absolute;
           top: 1.5rem;
           font-size: 3.5vw;
@@ -78,7 +78,7 @@
         //date
         h4 {
           position: absolute;
-          top: 4.8vh;
+          top: 4.7vh;
           right: 1rem;
           font-size: 2vw;
           font-weight: 400;
@@ -93,7 +93,7 @@
           display: flex;
           align-items: flex-start;
           flex-direction: column;
-          padding: 3vw 0 0 2vw;
+          padding: 4vw 0 0 2vw;
 
         }
 
@@ -118,7 +118,7 @@
       }
 
       &:hover {
-
+        border: none;
         .hoverContainer {
           display: flex;
           align-items: center;
@@ -164,6 +164,9 @@
 //........................Media Screen (min-width:500px) ..........................
 @media all and (min-width: 500px) {
   .experience {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1{
       font-size: 4.5vw;
@@ -206,7 +209,7 @@
         }
 
         &:hover {
-          border: none;
+
           h2 {
             top: 12rem;
             font-size: 2vw;
@@ -268,11 +271,9 @@
 
         &:hover {
 
-
           h2 {
             font-size: 1.5vw;
           }
-
           h3 {
 
             font-size: 1vw;

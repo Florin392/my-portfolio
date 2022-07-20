@@ -1,22 +1,18 @@
-
 $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
+@import "./src/components/topbar/topbar";
 
 @media all and (max-width: 500px) {
   .aboutmePage {
+
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../../assets/images/bck.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
 
     .aboutmeContainer {
       display: flex;
       flex-direction: column;
-      color: #5e1616;
+
     }
 
     .left-section {
@@ -29,8 +25,8 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     }
 
     h1 {
-      font-size: 6vw;
-      margin-bottom: 1.5rem;
+      font-size: 7vw;
+      margin: 5vh 0 2vh 0;
     }
 
     .description {
@@ -113,71 +109,63 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
   //...........hobies......................................................
   .right-section-hobbies {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 100%;
 
-    .options {
-      width: 100%;
 
-      .option {
-        display: flex;
-        align-items: flex-end;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 30vh;
-        font-size: 5vw;
-      }
-
-      .shadow {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-
-        height: 120px;
-
-        transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-      }
-
-      .label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-
-        .icon {
-
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
-          min-width: 40px;
-          max-width: 40px;
-          height: 40px;
-          border-radius: 100%;
-
-          background-color: white;
-          color: var(--defaultBackground);
-        }
-
-        .info {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin-left: 10px;
-          color: white;
-
-
-        }
-      }
-
+    .cards {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
     }
+
+    .card {
+      display: flex;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      height: 25vh;
+      margin-bottom: 1vw;
+    }
+
+    .card-details {
+
+      position: absolute;
+      bottom: 1vw;
+      left: 1.7vw;
+      display: flex;
+      align-items: center;
+
+      font-size: 3vw;
+      color: white;
+    }
+
+    h2 {
+      margin-left: .5vw;
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      min-width: 6vw;
+      max-width: 6vw;
+      height: 6vw;
+      border-radius: 100%;
+
+      background-color: white;
+
+      .logo {
+        color: pink;
+      }
+    }
+
+
   }
 
 
@@ -198,7 +186,7 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
 }
 
 
-////........................Media Screen (min-width:501px) ..........................
+//........................Media Screen (min-width:501px) ..........................
 
 
 @media all and (min-width: 501px) {
@@ -208,17 +196,13 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../../assets/images/bck.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 
 
     .aboutmeContainer {
       height: 90%;
       display: flex;
       flex-direction: row;
-      color: #5e1616;
     }
 
     .left-section {
@@ -248,193 +232,139 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
 
   .right-section {
     flex: .6;
+  }
+  .right-section-name {
+    display: flex;
+    width: 100%;
+    margin-top: 3vw;
 
-    .right-section-name {
-      display: flex;
+    svg {
       width: 100%;
-      margin-top: 3vw;
-
-      svg {
-        width: 100%;
-        margin: 3vw auto 0;
-        max-width: 95%;
-      }
-
-      text {
-        font-size: 6vw;
-      }
-
-      .text-copy {
-        fill: none;
-        stroke: white;
-        stroke-dasharray: 6% 29%;
-        stroke-width: 3px;
-        stroke-dashoffset: 0;
-        animation: stroke-offset 7s infinite linear;
-      }
-
-
-      .text-copy:nth-child(1) {
-        stroke: #9d1575;
-        animation-delay: -1;
-      }
-
-      .text-copy:nth-child(2) {
-        stroke: #840037;
-        animation-delay: -2s;
-      }
-
-      .text-copy:nth-child(3) {
-        stroke: #BD0034;
-        animation-delay: -3s;
-      }
-
-      .text-copy:nth-child(4) {
-        stroke: #BD0034;
-        animation-delay: -4s;
-      }
-
-      .text-copy:nth-child(5) {
-        stroke: #FDB731;
-        animation-delay: -5s;
-      }
-
-      @keyframes stroke-offset {
-        100% {
-          stroke-dashoffset: -35%;
-        }
-      }
+      margin: 3vw auto 0;
+      max-width: 95%;
     }
 
-    .right-section-hobbies {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    text {
+      font-size: 6vw;
+    }
+
+    .text-copy {
+      fill: none;
+      stroke: white;
+      stroke-dasharray: 6% 29%;
+      stroke-width: 3px;
+      stroke-dashoffset: 0;
+      animation: stroke-offset 7s infinite linear;
+    }
 
 
-      .options {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        overflow: hidden;
+    .text-copy:nth-child(1) {
+      stroke: #9d1575;
+      animation-delay: -1;
+    }
 
-        min-width: 600px;
-        max-width: 900px;
-        width: calc(100% - 100px);
-        height: 400px;
+    .text-copy:nth-child(2) {
+      stroke: #840037;
+      animation-delay: -2s;
+    }
 
-        .option {
-          position: relative;
-          overflow: hidden;
+    .text-copy:nth-child(3) {
+      stroke: #BD0034;
+      animation-delay: -3s;
+    }
 
-          min-width: 60px;
-          margin: 10px;
-          background-position: center;
-          background-size: cover;
+    .text-copy:nth-child(4) {
+      stroke: #BD0034;
+      animation-delay: -4s;
+    }
 
+    .text-copy:nth-child(5) {
+      stroke: #FDB731;
+      animation-delay: -5s;
+    }
 
-          cursor: pointer;
-
-          transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-
-          @for $i from 1 through length($optionDefaultColours) {
-            &:nth-child(#{$i}) {
-              --defaultBackground: #{nth($optionDefaultColours, $i)};
-            }
-          }
-
-          &.active {
-            flex-grow: 10000;
-            transform: scale(1);
-
-            max-width: 600px;
-            margin: 0;
-            border-radius: 40px;
-
-
-
-            .shadow {
-              box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
-            }
-
-            .label {
-              bottom: 20px;
-              left: 20px;
-
-              .info > div {
-                left: 0;
-                opacity: 1;
-              }
-            }
-          }
-
-          &:not(.active) {
-            flex-grow: 1;
-
-            border-radius: 30px;
-
-            .shadow {
-              bottom: -40px;
-              box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
-            }
-
-            .label {
-              bottom: 10px;
-              left: 10px;
-
-
-            }
-          }
-
-          .shadow {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-            height: 120px;
-
-            transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-          }
-
-          .label {
-            display: flex;
-            position: absolute;
-            right: 0;
-
-            height: 40px;
-            transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-
-            .icon {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-
-              min-width: 40px;
-              max-width: 40px;
-              height: 40px;
-              border-radius: 100%;
-
-              background-color: white;
-              color: var(--defaultBackground);
-            }
-
-            .info {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              margin-left: 10px;
-              color: white;
-              white-space: pre;
-            }
-          }
-        }
+    @keyframes stroke-offset {
+      100% {
+        stroke-dashoffset: -35%;
       }
     }
   }
 
+  .right-section-hobbies {
+
+    height: 60%;
+    width: 60vw;
+
+  }
+  .cards {
+    display: flex;
+    width: 95%;
+
+
+  }
+  .card {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    flex: 0.5;
+    border-radius: 5rem;
+    position: relative;
+    margin: .5rem;
+    cursor: pointer;
+    transition: flex .3s;
+
+    .card-details {
+      position: absolute;
+      bottom: 1vw;
+      left: 1.7vw;
+
+      display: flex;
+      align-items: center;
+
+      font-size: .8vw;
+
+    }
+
+    h2 {
+      opacity: 0;
+      margin-left: .5vw;
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      min-width: 2vw;
+      max-width: 2vw;
+      height: 2vw;
+      border-radius: 100%;
+
+      background-color: white;
+
+      .logo {
+        color: pink;
+        opacity: 1;
+
+      }
+    }
+
+    &.active {
+      color: white;
+      flex: 3;
+
+      .card-details {
+        h2 {
+          opacity: 1;
+        }
+      }
+
+
+    }
+  }
 
   .toHomePage {
     display: flex;

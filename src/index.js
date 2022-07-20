@@ -4,6 +4,8 @@ import App from './App';
 import {ThemeProvider} from "./context";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import About from "./components/about/About";
+
+
 ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider>
@@ -11,7 +13,6 @@ ReactDOM.render(
                 <Routes>
                     <Route path='/' element={<App/>}/>
                     <Route path='/about' element={<About/>}/>
-
 
                 </Routes>
             </Router>

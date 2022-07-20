@@ -16,7 +16,7 @@ function App() {
     const theme = useContext(ThemeContext)
     const setdarkMode = theme.state.darkMode;
 
-    return (<>
+    return (
         <div className="app"
              style={{
                  backgroundColor: setdarkMode ? "#15023a" : "white",
@@ -27,13 +27,13 @@ function App() {
             <Toggle menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <div className="sections">
-                <Intro />
+                <Intro/>
                 <Experience/>
                 <Contact/>
                 <Footer/>
             </div>
         </div>
-    </>);
+    );
 }
 
 export default App;
