@@ -23,13 +23,13 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                     </div>
                    <div className="itemContainer">
                        <div className="phone" onClick={() => {
-                           navigate('/portfolio')
+                           navigate('/')
                        }}>
                            <a href="#footer"> <FontAwesomeIcon  icon={faUser}/></a>
                            <span> +40 731 006 282</span>
                        </div>
                        <div className="mail" onClick={() => {
-                           navigate('/portfolio')
+                           navigate('/')
                        }}>
                            <a href="#contact"> <FontAwesomeIcon  icon={faEnvelope}/></a>
                            <span> iordacheflorin3@yahoo.com</span>
