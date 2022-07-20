@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
 
@@ -12,35 +11,35 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
 
-  .aboutmeContainer {
-    display: flex;
-    flex-direction: column;
-    color: #5e1616;
-  }
 
-  .left-section {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2vh;
-  }
+    .aboutmeContainer {
+      display: flex;
+      flex-direction: column;
+      color: #5e1616;
+    }
 
-  h1 {
-    font-size: 6vw;
-    margin-bottom: 1.5rem;
-  }
+    .left-section {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 2vh;
+    }
 
-  .description {
-    font-size: 3.3vw;
-    max-width: 90%;
-    font-weight: 400;
-    line-height: 2rem;
-    text-align: justify;
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 1.5rem;
+    }
 
+    .description {
+      font-size: 3.3vw;
+      max-width: 90%;
+      font-weight: 400;
+      line-height: 2rem;
+      text-align: justify;
+    }
   }
   //...................right section
 
@@ -48,6 +47,8 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
+
+    //...........name......................................................
 
     .right-section-name {
       display: flex;
@@ -109,7 +110,7 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
   }
 
 
-  //.................................................................
+  //...........hobies......................................................
   .right-section-hobbies {
     display: flex;
     flex-direction: column;
@@ -128,61 +129,56 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
         background-size: cover;
         background-repeat: no-repeat;
         height: 30vh;
-        margin-bottom: 2vh;
         font-size: 5vw;
       }
-        .shadow {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
 
-          height: 120px;
+      .shadow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
 
-          transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-        }
+        height: 120px;
 
-        .label {
+        transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+
+      .label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+        .icon {
+
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
 
+          min-width: 40px;
+          max-width: 40px;
+          height: 40px;
+          border-radius: 100%;
 
-          .icon {
-
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            min-width: 40px;
-            max-width: 40px;
-            height: 40px;
-            border-radius: 100%;
-
-            background-color: white;
-            color: var(--defaultBackground);
-          }
-
-          .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 10px;
-            color: white;
-            white-space: pre;
-
-
-
-
-          }
+          background-color: white;
+          color: var(--defaultBackground);
         }
 
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+          color: white;
+
+
+        }
       }
+
     }
-
-
+  }
 
 
   //.................................................................
@@ -201,167 +197,256 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
   }
 }
 
+
+////........................Media Screen (min-width:501px) ..........................
+
+
 @media all and (min-width: 501px) {
-  .aboutmeContainer {
+  .aboutmePage {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../../assets/images/bck.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    flex-direction: row;
-  }
-  .right-section-hobbies {
 
-    font-family: 'Roboto', sans-serif;
-    transition: .25s;
-
-    .options {
+    .aboutmeContainer {
+      height: 90%;
       display: flex;
       flex-direction: row;
-      align-items: stretch;
-      justify-content: space-between;
-      overflow: hidden;
-      min-width: 600px;
-      max-width: 900px;
-      width: calc(100% - 10rem);
-      height: 400px;
+      color: #5e1616;
+    }
 
-      @for $i from 1 through 4 {
-        @media screen and (max-width: 798px - $i*80) {
-          min-width: 600px - $i*80;
-          .option:nth-child(#{6-$i}) {
-            display: none;
-          }
-        }
+    .left-section {
+      flex: .4;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 2vh;
+    }
+
+    h1 {
+      font-size: 3vw;
+      margin-bottom: 1.5rem;
+    }
+
+    .description {
+      font-size: 1vw;
+      max-width: 90%;
+      font-weight: 400;
+      line-height: 2rem;
+      text-align: justify;
+    }
+  }
+  //...................right section
+
+  .right-section {
+    flex: .6;
+
+    .right-section-name {
+      display: flex;
+      width: 100%;
+      margin-top: 3vw;
+
+      svg {
+        width: 100%;
+        margin: 3vw auto 0;
+        max-width: 95%;
       }
 
-      .option {
-        position: relative;
+      text {
+        font-size: 6vw;
+      }
+
+      .text-copy {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 6% 29%;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        animation: stroke-offset 7s infinite linear;
+      }
+
+
+      .text-copy:nth-child(1) {
+        stroke: #9d1575;
+        animation-delay: -1;
+      }
+
+      .text-copy:nth-child(2) {
+        stroke: #840037;
+        animation-delay: -2s;
+      }
+
+      .text-copy:nth-child(3) {
+        stroke: #BD0034;
+        animation-delay: -3s;
+      }
+
+      .text-copy:nth-child(4) {
+        stroke: #BD0034;
+        animation-delay: -4s;
+      }
+
+      .text-copy:nth-child(5) {
+        stroke: #FDB731;
+        animation-delay: -5s;
+      }
+
+      @keyframes stroke-offset {
+        100% {
+          stroke-dashoffset: -35%;
+        }
+      }
+    }
+
+    .right-section-hobbies {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .options {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
         overflow: hidden;
-        min-width: 60px;
-        margin: 10px;
-        //border:0px solid --defaultColor;
 
-        background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
-        background-size: auto 100%;
-        background-position: center;
+        min-width: 600px;
+        max-width: 900px;
+        width: calc(100% - 100px);
+        height: 400px;
 
-        cursor: pointer;
+        .option {
+          position: relative;
+          overflow: hidden;
 
-        transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+          min-width: 60px;
+          margin: 10px;
+          background-position: center;
+          background-size: cover;
 
-        @for $i from 1 through length($optionDefaultColours) {
-          &:nth-child(#{$i}) {
-            --defaultBackground: #{nth($optionDefaultColours, $i)};
-          }
-        }
 
-        &.active {
-          flex-grow: 10000;
-          transform: scale(1);
+          cursor: pointer;
 
-          max-width: 600px;
-          margin: 0;
-          border-radius: 40px;
+          transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 
-          background-size: auto 100%;
-
-          .shadow {
-            box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
-          }
-
-          .label {
-            bottom: 20px;
-            left: 20px;
-
-            .info > div {
-              left: 0;
-              opacity: 1;
+          @for $i from 1 through length($optionDefaultColours) {
+            &:nth-child(#{$i}) {
+              --defaultBackground: #{nth($optionDefaultColours, $i)};
             }
           }
 
-          /*&:active {
-             transform:scale(0.9);
-          }*/
-        }
+          &.active {
+            flex-grow: 10000;
+            transform: scale(1);
 
-        &:not(.active) {
-          flex-grow: 1;
+            max-width: 600px;
+            margin: 0;
+            border-radius: 40px;
 
-          border-radius: 30px;
 
-          .shadow {
-            bottom: -40px;
-            box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
-          }
 
-          .label {
-            bottom: 10px;
-            left: 10px;
+            .shadow {
+              box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+            }
 
-            .info > div {
+            .label {
+              bottom: 20px;
               left: 20px;
-              opacity: 0;
+
+              .info > div {
+                left: 0;
+                opacity: 1;
+              }
             }
           }
-        }
 
-        .shadow {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
+          &:not(.active) {
+            flex-grow: 1;
 
-          height: 120px;
+            border-radius: 30px;
 
-          transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-        }
+            .shadow {
+              bottom: -40px;
+              box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+            }
 
-        .label {
-          display: flex;
-          position: absolute;
-          right: 0;
+            .label {
+              bottom: 10px;
+              left: 10px;
 
-          height: 40px;
-          transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 
-          .icon {
+            }
+          }
 
+          .shadow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            height: 120px;
+
+            transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+          }
+
+          .label {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            position: absolute;
+            right: 0;
 
-            min-width: 40px;
-            max-width: 40px;
             height: 40px;
-            border-radius: 100%;
+            transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 
-            background-color: white;
-            color: var(--defaultBackground);
-          }
+            .icon {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
 
-          .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+              min-width: 40px;
+              max-width: 40px;
+              height: 40px;
+              border-radius: 100%;
 
-            margin-left: 10px;
-
-            color: white;
-
-            white-space: pre;
-
-            > div {
-              position: relative;
-
-              transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+              background-color: white;
+              color: var(--defaultBackground);
             }
 
-            .main {
-              font-weight: bold;
-              font-size: 1.2rem;
+            .info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-left: 10px;
+              color: white;
+              white-space: pre;
             }
-
           }
         }
       }
+    }
+  }
+
+
+  .toHomePage {
+    display: flex;
+    justify-content: center;
+    margin: 1vw auto;
+
+    button {
+      font-size: 1.5rem;
+      padding: .7rem;
+      border-radius: 12%;
+      cursor: pointer;
+
     }
   }
 }

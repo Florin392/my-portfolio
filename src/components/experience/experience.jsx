@@ -64,17 +64,16 @@ export default function Experience() {
     return (<div className="experience" id="experience"
                  style={{backgroundColor: setdarkMode || "whiteSmoke"}}
         >
-
             <h1>Background</h1>
-            <ul>
+
+            <ul className="selectPastExperience">
                 {list.map((item, indexitem) => (<ExperienceList title={item.title} active={selected === item.id}
                                                                 setCateg={setSelected}
                                                                 id={item.id} key={indexitem}/>))}
             </ul>
+
             <div className="container">
                 {data.map((d, index) => (
-
-
                     <Tilt className="item" options={options} key={index}>
                         <div className="itemDetails">
                             <h3>{d.title}</h3>

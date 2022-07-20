@@ -33,7 +33,7 @@
       .title {
         width: 80%;
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 7vw;
         margin-bottom: 1.5rem;
       }
 
@@ -47,7 +47,7 @@
           align-items: center;
           margin: 2rem 0 1rem 0;
           font-weight: 300;
-          font-size: 1.2rem;
+          font-size: 3vw;
           letter-spacing: .1rem;
 
           .icon {
@@ -60,7 +60,6 @@
     }
 
     .wr-right {
-      overflow: hidden;
       flex: .5;
       width: 100%;
       display: flex;
@@ -69,12 +68,16 @@
       justify-content: center;
 
 
+
       .description {
         width: 80%;
+        height: 6vh;
         display: flex;
         text-align: center;
         margin-top: 3rem;
-        font-size: 2rem;
+        font-size: 4.5vw;
+
+
       }
       .errors {
         height: auto;
@@ -90,7 +93,7 @@
         padding-top: 6rem;
         color: green;
         letter-spacing: .1rem;
-        font-size: 2.5rem;
+        font-size: 3vw;
         font-weight: 700;
 
       }
@@ -105,14 +108,13 @@
           padding: 2rem;
           overflow: hidden;
 
-
           input {
-            width: 80%;
+            width: 30vw;
             height: 3rem;
             border: none;
             border-bottom: .2rem solid black;
             margin-top: 1.3rem;
-            font-size: 1.4rem;
+            font-size: 3vw;
             padding-left: .3rem;
 
           }
@@ -159,6 +161,7 @@
 
         .title {
           width: 100%;
+          font-size: 3vw;
         }
 
         .info {
@@ -172,9 +175,14 @@
         flex: .45;
         padding-top: 10rem;
 
+        .description{
+          font-size: 2vw;
+          height: 5vw;
+        }
+
         .errors {
           position: absolute;
-          bottom: 7vh;
+          bottom: 1vw;
         }
 
         .messageSent {
@@ -184,9 +192,19 @@
 
 
         .formContent {
+
           form {
+            input {
+              font-size: 1.5vw;
+              width: 20vw;
+            }
+            label{
+              width: 30vw;
+            }
             textarea {
               margin-top: .5rem;
+              width: 30vw;
+
             }
           }
         }
@@ -199,3 +217,30 @@
   }
 }
 
+//........................Media Screen (min-width:1550px) ..........................
+
+@media all and (min-width: 1550px) {
+  .contact {
+
+    .contact-wrapper {
+      .wr-right {
+        .formContent {
+
+          form {
+            input {
+              font-size: .8vw;
+              width: 10vw;
+            }
+
+
+
+            textarea {
+              margin-top: .5rem;
+              width: 20vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

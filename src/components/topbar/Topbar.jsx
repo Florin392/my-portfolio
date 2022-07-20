@@ -28,7 +28,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                            <span> iordacheflorin3@yahoo.com</span>
                        </div>
                        <div className="socialMedia">
-                           <a href="https://www.linkedin.com/in/florin-iordache-2b998b166" >
+                           <a href="https://www.linkedin.com/in/florin-iordache-2b998b166" target="_blank" rel="noreferrer">
                                <FontAwesomeIcon className="icon linkedin"  icon={faLinkedin} />
                            </a>
                        </div>

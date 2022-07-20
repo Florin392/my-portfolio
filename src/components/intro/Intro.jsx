@@ -31,7 +31,7 @@ export default function Intro() {
                     <h3>and this is my <span ref={textRef}>
                     </span></h3>
                     <div className='aboutMe'>
-                        <Link to='/about'>
+                        <Link to='/about/'>
                             <h2>more about me</h2>
                         </Link>
                     </div>
