@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./menu.scss"
 import {ThemeContext} from "../../context";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Menu({menuOpen, setMenuOpen, index}) {
     const theme = useContext(ThemeContext)
@@ -29,6 +29,14 @@ export default function Menu({menuOpen, setMenuOpen, index}) {
 
                 </li>
                 <li onClick={(event) => {
+                    setMenuOpen(false)}}
+
+                    key={index}
+                >
+                    <Link to="/about">About me</Link>
+
+                </li>
+                <li onClick={(event) => {
                     setMenuOpen(false);
                     navigate('/')}}
                     key={index}
@@ -36,14 +44,7 @@ export default function Menu({menuOpen, setMenuOpen, index}) {
                     <a href="#footer">Contact</a>
 
                 </li>
-                <li onClick={(event) => {
-                    setMenuOpen(false);
-                    navigate('/portfolio')}}
-                    key={index}
-                >
-                    <a href="/portfolio/about">About me</a>
 
-                </li>
 
 
             </ul>
