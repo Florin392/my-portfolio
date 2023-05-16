@@ -8,7 +8,7 @@ import About from "./components/about/About";
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <Router>
+      <Router basename={"/portfolio"}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/about" element={<About />} />
