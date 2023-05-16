@@ -39,7 +39,7 @@ export default function About() {
             <h2 className="description">
               I am a junior front-end developer with experience in React,
               Typescript, CSS and HTML.
-              <br /> After almost one year of working in the field and 2 since
+              <br /> After almost one year of working in the field and two since
               first taking contact with this field I am searching for new
               challenges and way to improve my knowledge. I chose front-end
               because I am really good at visualising things and I discovered I
